@@ -18,7 +18,7 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env()
-environ.Env.read_env(BASE_DIR / ".env")  # agora BASE_DIR já existe quando é usado aqui
+environ.Env.read_env(BASE_DIR / ".env")
 
 BST_CHAVE = env("BST_CHAVE", default="chave-insegura")
 
