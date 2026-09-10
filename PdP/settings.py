@@ -65,6 +65,12 @@ WSGI_APPLICATION = 'PdP.wsgi.application'
 # ASGI (Channels)
 ASGI_APPLICATION = "PdP.asgi.application"
 
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -120,3 +126,4 @@ TURN_CREDENTIAL = os.environ.get("TURN_CREDENTIAL", "")
 
 SIGNALING_ROOM_MAX_PEERS = 2          # sala é estritamente 1-para-1
 SIGNALING_CHALLENGE_TTL_SECONDS = 60  # tempo máximo para concluir o handshake
+
