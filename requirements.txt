@@ -5,3 +5,5 @@ djangorestframework_simplejwt==5.5.1
 PyJWT==2.13.0
 sqlparse==0.6.0
 tzdata==2026.3
+channels==4.1.0
+daphne==4.1.2
